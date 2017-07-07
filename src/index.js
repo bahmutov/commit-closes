@@ -5,7 +5,9 @@ const is = require('check-more-types')
 
 function commitCloses (subject, body) {
   la(is.unemptyString(subject), 'commit is missing subject', subject)
-  la(is.maybe.unemptyString(body), 'wrong commit body', body)
+  if (body) {
+    la(is.string(body), 'wrong commit body', body)
+  }
 
   if (body === undefined) {
     body = ''
