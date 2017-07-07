@@ -10,3 +10,23 @@ exports['finds multiple issues in subject 1'] = [
   1001
 ]
 
+exports['finds multiple issues in body on separate lines 1'] = [
+  123,
+  25,
+  33
+]
+
+exports['finds multiple issues in body same line 1'] = [
+  123,
+  25,
+  32
+]
+
+exports['finds multiple issues in body with dots 1'] = [
+  2,
+  3,
+  4,
+  5,
+  6
+]
+
