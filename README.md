@@ -8,6 +8,9 @@
 [![semantic-release][semantic-image] ][semantic-url]
 [![js-standard-style][standard-image]][standard-url]
 
+Commit parsing code based on
+[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
+
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.
