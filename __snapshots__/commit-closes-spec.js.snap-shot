@@ -30,3 +30,18 @@ exports['finds multiple issues in body with dots 1'] = [
   6
 ]
 
+exports['readme example 1'] = [
+  2,
+  21,
+  4,
+  10
+]
+
+exports['different forms 1'] = [
+  1,
+  2,
+  4,
+  5,
+  6
+]
+

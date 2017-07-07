@@ -11,6 +11,17 @@
 Commit parsing code based on
 [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
 
+You can [close GitHub issues with commit text](https://help.github.com/articles/closing-issues-via-commit-messages/). For example
+
+```
+git commit -m "this feature closes #4"
+```
+
+will close issue 4 when pushed to github. This module can find issues closed
+given commit subject and body. All forms are supported:
+`fix|fixes|fixed|close|closes|closed|resolve|resolves|resolved`
+case-insensitive.
+
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.
@@ -20,6 +31,19 @@ npm install --save commit-closes
 ```
 
 ## Use
+
+Give this function commit subject and optional body and it will return list
+of closed issue numbers. If no issues is closed, returns empty list
+
+```js
+const commitCloses = require('commit-closes')
+const closed = commitCloses('this is subject', `
+this commit closes #2
+and resolves #21, #4
+and fixed #10
+`)
+// closed is [2, 21, 4, 10]
+```
 
 ### Small print
 

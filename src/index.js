@@ -15,7 +15,7 @@ function commitCloses (subject, body) {
 
   const lines = [subject].concat(body.split('\n'))
   lines.forEach(function (line) {
-    const regex = /(?:Closes|Fixes|Resolves)\s((?:#\d+(?:,\s)?)+)/ig
+    const regex = /(?:Close|Closes|Closed|Fix|Fixes|Fixed|Resolve|Resolves|Resolved)\s((?:#\d+(?:,\s)?)+)/ig
     const match = line.match(regex)
 
     if (match) {

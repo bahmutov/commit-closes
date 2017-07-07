@@ -57,4 +57,20 @@ describe('commit-closes', () => {
     )
     snapshot(issues)
   })
+
+  it('different forms', () => {
+    const issues = commitCloses('this is subject', `
+    close #1, closed #2, fix #4, fixed #5, resolves #6
+    `)
+    snapshot(issues)
+  })
+
+  it('readme example', () => {
+    const issues = commitCloses('this is subject', `
+    this commit closes #2
+    and resolves #21, #4
+    and fixed #10
+    `)
+    snapshot(issues)
+  })
 })
