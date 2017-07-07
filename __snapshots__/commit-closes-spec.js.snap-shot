@@ -1,2 +1,12 @@
 exports['nothing closed 1'] = []
 
+exports['finds one issue in subject 1'] = [
+  22
+]
+
+exports['finds multiple issues in subject 1'] = [
+  22,
+  40,
+  1001
+]
+
